@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd party apps
-    'debug-toolbar',
+    'debug_toolbar',
     # apps
     'playgroud',
 ]
@@ -52,6 +52,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+]
+
+INTERNAL_IPS = [
+    # For debug_toolbar
+    "127.0.0.1",
+    # ...
 ]
 
 ROOT_URLCONF = 'core.urls'
